@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { ImageGalleryItem } from './ImageGalleryItem';
 //import { ImageGalleryItem } from './ImageGalleryItem';
 
 export class ImageApi extends Component {
@@ -41,7 +42,7 @@ export class ImageApi extends Component {
     }
 
     if (status === 'resolved') {
-      return console.log(image);
+      return <ImageGalleryItem image={image} />;
     }
   }
 }
