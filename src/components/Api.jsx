@@ -1,4 +1,5 @@
 import { Component } from 'react';
+//import { ImageGalleryItem } from './ImageGalleryItem';
 
 export class ImageApi extends Component {
   state = {
@@ -30,9 +31,17 @@ export class ImageApi extends Component {
   }
 
   render() {
-    const { status } = this.state;
+    const { status, image } = this.state;
     if (status === 'idle') {
       return <div>Enter data for search</div>;
+    }
+
+    if (status === 'pending') {
+      return <div>Loading...</div>;
+    }
+
+    if (status === 'resolved') {
+      return console.log(image);
     }
   }
 }

@@ -1,10 +1,9 @@
-export const ImageGalleryItem = ({ data }) => {
+import { ImageApi } from './Api';
+
+export const ImageGalleryItem = ({ images: { total } }) => {
   return (
     <div>
-      <li>
-        <img src="" alt="" />
-      </li>
-      ;
+      <p>Total: {total}</p>;
     </div>
   );
 };
