@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { SearchBar } from './Searchbar';
+//import { ImageGalleryItem } from './ImageGalleryItem';
+import { ImageApi } from './Api';
 
 export class App extends Component {
   state = {
@@ -14,6 +16,7 @@ export class App extends Component {
     return (
       <>
         <SearchBar onSubmit={this.handleFormSubmit} />
+        <ImageApi imageName={this.state.imageName} />
       </>
     );
   }
