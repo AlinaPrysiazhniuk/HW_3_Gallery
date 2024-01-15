@@ -1,7 +1,9 @@
-export const ImageGalleryItem = ({ image: { total } }) => {
+export const ImageGalleryItem = ({ image }) => {
   return (
     <div>
-      <p>Total: {total}</p>
+      <p>Total: {image.total}</p>
+      <p>TotalHits: {image.totalHits}</p>
+      <p>TotalHits: {image.hits.length}</p>
     </div>
   );
 };
