@@ -4,7 +4,7 @@ import { ImageGallery } from './ImageGallery';
 
 export class ImageApi extends Component {
   state = {
-    image: null,
+    image: [],
     error: null,
     status: 'idle',
   };

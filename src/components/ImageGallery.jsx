@@ -9,6 +9,7 @@ export const ImageGallery = ({ image }) => {
         flexWrap: 'wrap',
         gap: '20px',
         justifyContent: 'center',
+        paddingLeft: '0px',
       }}
     >
       {image.hits.map(hits => {
