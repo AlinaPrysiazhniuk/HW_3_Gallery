@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { ImageGalleryItem } from './ImageGalleryItem';
+import { ImageGallery } from './ImageGallery';
 //import { ImageGalleryItem } from './ImageGalleryItem';
 
 export class ImageApi extends Component {
@@ -17,7 +17,7 @@ export class ImageApi extends Component {
       this.setState({ status: 'pending' });
 
       fetch(
-        `https://pixabay.com/api/?q=cat&page=1&key=34983998-155dfb76bac09cdf48f99cd2f&q=${nextName}&orientation=horizontal&per_page=12`
+        `https://pixabay.com/api/?q=cat&page=1&key=34983998-155dfb76bac09cdf48f99cd2f&q=${nextName}&orientation=horizontal&per_page=200`
       )
         .then(response => {
           if (response.ok) {
@@ -42,7 +42,7 @@ export class ImageApi extends Component {
     }
 
     if (status === 'resolved') {
-      return <ImageGalleryItem image={image} />;
+      return <ImageGallery image={image} />;
     }
   }
 }
