@@ -2,7 +2,15 @@ import { ImageGalleryItem } from './ImageGalleryItem';
 
 export const ImageGallery = ({ image }) => {
   return (
-    <ul>
+    <ul
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: '20px',
+        justifyContent: 'center',
+      }}
+    >
       {image.hits.map(hits => {
         return <ImageGalleryItem image={hits} key={hits.id} />;
       })}

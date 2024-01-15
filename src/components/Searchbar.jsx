@@ -23,7 +23,14 @@ export class SearchBar extends Component {
   render() {
     return (
       <header>
-        <form onSubmit={this.handleSubmit}>
+        <form
+          onSubmit={this.handleSubmit}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            backgroundColor: 'blue',
+          }}
+        >
           <button type="submit">
             <span>Search</span>
           </button>
