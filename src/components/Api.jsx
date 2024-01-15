@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { ImageGallery } from './ImageGallery';
+import { Loader } from './Loader';
 //import { ImageGalleryItem } from './ImageGalleryItem';
 
 export class ImageApi extends Component {
@@ -38,7 +39,7 @@ export class ImageApi extends Component {
     }
 
     if (status === 'pending') {
-      return <div>Loading...</div>;
+      return <Loader />;
     }
 
     if (status === 'resolved') {
