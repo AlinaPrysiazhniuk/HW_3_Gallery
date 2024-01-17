@@ -1,6 +1,6 @@
-function fetchApi(nextName) {
+function fetchApi(nextName, page) {
   return fetch(
-    `https://pixabay.com/api/?q=cat&page=1&key=34983998-155dfb76bac09cdf48f99cd2f&q=${nextName}&orientation=horizontal&per_page=20`
+    `https://pixabay.com/api/?q=cat&page=${page}&key=34983998-155dfb76bac09cdf48f99cd2f&q=${nextName}&orientation=horizontal&per_page=20`
   ).then(response => {
     if (response.ok) {
       return response.json();
