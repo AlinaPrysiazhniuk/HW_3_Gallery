@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 export class SearchBar extends Component {
   state = {
     imageName: '',
+    currentPage: 1,
   };
 
   handleNameChange = event => {
@@ -17,7 +18,7 @@ export class SearchBar extends Component {
       return;
     }
     this.props.onSubmit(this.state.imageName);
-    this.setState({ imageName: '' });
+    this.setState({ imageName: '', currentPage: 1 });
   };
 
   render() {
